@@ -22,11 +22,5 @@ Identifying listening ports is critical for minimizing the attack surface, detec
 ### Phase 1: Script Development & Logic
 To gather real-time data on active network listeners without relying on third-party scanners, a PowerShell script was utilized to filter TCP connections specifically in a `Listen` state. 
 
-```powershell
-# PowerShell snippet to find listening ports
-Get-NetTCPConnection -State Listen | 
-    Select-Object LocalAddress, LocalPort, State, OwningProcess | 
-    Sort-Object LocalPort | 
-    Format-Table -AutoSize
-![PowerShell Execution](./image1.png)
-![Script Output](./image2.png)
+![PowerShell Execution](./powershell-execution.png)
+![Script Output](./network-port-output.png)
