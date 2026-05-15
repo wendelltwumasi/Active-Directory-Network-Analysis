@@ -28,3 +28,5 @@ Get-NetTCPConnection -State Listen |
     Select-Object LocalAddress, LocalPort, State, OwningProcess | 
     Sort-Object LocalPort | 
     Format-Table -AutoSize
+![PowerShell Execution](./image1.png)
+![Script Output](./image2.png)
